@@ -97,12 +97,6 @@ button,
 
 /* Layouts
 ------------------------------------------------------------ */
-.site-footer {
-    background-color: var(--secondary);
-    color: var(--white);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
 
 .header__layout-grid {
     display: grid;
@@ -200,7 +194,7 @@ button,
 }
 
 .main-menu__list > li:hover {
-    background-color: var(--color_main_menu_item_bg_hover);
+    /*background-color: var(--color_main_menu_item_bg_hover);*/
     color: var(--color_main_menu_link_hover);
     border-bottom: 2px solid var(--color_main_menu_item_border_hover);
 }
@@ -539,6 +533,12 @@ button,
     color: #ccc;
 }
 
+.site-footer {
+    padding-top: 2rem;
+}
+
+
+
 
 /* Cards */
 
@@ -567,5 +567,56 @@ button,
     display: flex;
 }
 
-/* New Stuff
------------------------------------------------------------- */
+
+
+
+
+
+
+
+/* People */
+
+.people {
+    margin-top: 50px;
+}
+
+.people-tab {
+    margin: 30px auto;
+    table-layout: fixed;
+}
+
+.people .people-tab tr:nth-child(even) {
+    background-color: #ddd;
+} 
+
+.people .people-tab td {
+
+    padding: 5px 10px;
+    border: 1px solid;
+    width: 250px;
+}
+
+.people .people-tab th {
+    font-size: 1.4rem;
+    font-weight:500;
+}
+
+.former-tab {
+    margin: 30px auto;
+    table-layout: fixed;
+    width: 43%;
+}
+
+.former-tab td {
+    padding: 5px 10px;
+    border: 1px solid;
+}
+
+.former-tab th {
+    font-size: 1.4rem;
+    font-weight:500;
+}
+
+.former-tab tr:nth-child(even) {
+    background-color: #ddd;
+} 

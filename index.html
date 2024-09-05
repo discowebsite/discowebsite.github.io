@@ -133,7 +133,7 @@
                 <div class="header__main-menu">
                     <nav aria-label="Main Menu" class="main-menu__nav">
                         <ul class="main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu">
-                            <li data-pg-collapsed> <a href="#">Home</a>
+                            <li data-pg-collapsed> <a href="/index.html">Home</a>
                             </li>
                             <li class="has-submenu" x-data="{
                                     open: false,
@@ -163,7 +163,7 @@
                                     }
                                 }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']"> 
                                 <div>
-                                    <a href="people.html">People</a>
+                                    <a href="/people.html">People</a>
                                     <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
                                             <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
@@ -171,11 +171,11 @@
                                     </button>
                                 </div>
                                 <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')">
-                                    <li> <a href="people/jaeric.html">Järic</a>
+                                    <li> <a href="/people/jaeric.html">Järic</a>
                                     </li>
-                                    <li> <a href="people/schmeric.html">Schmeric</a>
+                                    <li> <a href="/people/schmeric.html">Schmeric</a>
                                     </li>
-                                    <li> <a href="people/maunzi.html">Maunzi</a>
+                                    <li> <a href="/people/maunzi.html">Maunzi</a>
                                     </li>
                                 </ul>
                             </li>
@@ -207,7 +207,7 @@
                                     }
                                 }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']" cms-no-export> 
                                 <div>
-                                    <a href="teaching-winter.html">Teaching</a>
+                                    <a href="/teaching-winter.html">Teaching</a>
                                     <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
                                             <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
@@ -215,11 +215,11 @@
                                     </button>
                                 </div>
                                 <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')">
-                                    <li> <a href="teaching/pansec.html">PanSec</a>
+                                    <li> <a href="/teaching/pansec.html">PanSec</a>
                                     </li>
-                                    <li> <a href="teaching/theses.html">Theses</a>
+                                    <li> <a href="/teaching/theses.html">Theses</a>
                                     </li>
-                                    <li> <a href="teaching/completed-theses.html">Completed Theses</a>
+                                    <li> <a href="/teaching/completed-theses.html">Completed Theses</a>
                                     </li>
                                 </ul>
                             </li>
@@ -259,36 +259,36 @@
         <div class="team-grid">
             <div class="card">
                 <p>
-                    <a href="people/jaeric.html">
-                        <img src="images/team/cat1.png" alt="cat1">
+                    <a href="/people/jaeric.html">
+                        <img src="/images/team/cat1.png" alt="cat1">
                     </a>
                 </p>
                 <p>
-                    <a href="people/jaeric.html">Järic</a>
+                    <a href="/people/jaeric.html">Järic</a>
                 </p>
                 <p>Group Head</p>
             </div>
 
             <div class="card">
                 <p>
-                    <a href="people/schmeric.html">
-                        <img src="images/team/cat2.png" alt="cat2">
+                    <a href="/people/schmeric.html">
+                        <img src="/images/team/cat2.png" alt="cat2">
                     </a>
                 </p>
                 <p>
-                    <a href="people/schmeric.html">Schmeric</a>
+                    <a href="/people/schmeric.html">Schmeric</a>
                 </p>
                 <p>Janitor</p>
             </div>
 
             <div class="card">
                 <p>
-                    <a href="people/maunzi.html">
-                        <img src="images/team/cat3.png" alt="cat3">
+                    <a href="/people/maunzi.html">
+                        <img src="/images/team/cat3.png" alt="cat3">
                     </a>
                 </p>
                 <p>
-                    <a href="people/maunzi.html">Maunzi</a>
+                    <a href="/people/maunzi.html">Maunzi</a>
                 </p>
                 <p>Secretary</p>
             </div>
@@ -297,50 +297,60 @@
 
 </section>
 
-<section class="footer bg-footer">
+
+
+
+
+<footer class="site-footer">
+
+    <section class="footer bg-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="card-footer">
+                    <div class="img-footer"><img src="/images/disco_dance.png" width="100" alt="disco"></div>
+                    <div class="content">
+                        <p class="text-md">WRITE YOUR THESIS WITH A DISCO ADVISOR</p>
+                        <p class="text-sm">We offer a variety of bachelor and master <a href="/teaching/theses.html">theses</a> at any point in the academic year. Also check out some of our <a href="/teaching/completed-theses.html">completed theses</a>.</p>
+                    </div>
+                </div>
+    
+                <div class="card-rptu">
+                    <div class="content">
+                        <p class="text-sm">We are part of the <a href="https://cs.rptu.de/en/">Department of Computer Science</a> at </p>
+                    </div>
+                    <div class="img-rptu"><a href="https://rptu.de/en/">
+                        <img src="/images/RPTUlogo.svg" alt="rptu">
+                    </a></div>
+                </div>
+    
+    
+            </div>
+        </div>
+    
+    </section>
+    
+    <section class="impressum">
     <div class="container">
-        <div class="footer-grid">
-            <div class="card-footer">
-                <div class="img-footer"><img src="images/disco_dance.png" width="100" alt="disco"></div>
-                <div class="content">
-                    <p class="text-md">WRITE YOUR THESIS WITH A DISCO ADVISOR</p>
-                    <p class="text-sm">We offer a variety of bachelor and master <a href="teaching/theses.html">theses</a> at any point in the academic year. Also check out some of our <a href="teaching/completed-theses.html">completed theses</a>.</p>
-                </div>
-            </div>
-
-            <div class="card-rptu">
-                <div class="content">
-                    <p class="text-sm">We are part of the <a href="https://cs.rptu.de/en/">Department of Computer Science</a> at </p>
-                </div>
-                <div class="img-rptu"><a href="https://rptu.de/en/">
-                    <img src="images/RPTUlogo.svg" alt="rptu">
-                </a></div>
-            </div>
-
-
+        <div class="pobox bg-impressum text-tn text-center">
+            <p>distributed computer systems lab, building 36, 4th floor</p>
+            <p>department of computer science, RPTU Kaiserslautern-Landau</p>
+            <p><br></p>
+            <p>PO box 3049, 67663 Kaiserslautern, Germany</p>
+        </div>
+    
+        <div class="imp-links text-center">
+            <a href="/people/jaeric.html">Contact Us</a>
+            <a href="https://rptu.de/impressum">Impressum</a>
+            <a href="https://rptu.de/datenschutzerklaerung">Datenschutz</a>
+            <a href="https://rptu.de/datenschutz-und-social-media">Datenschutz und Social Media</a>
         </div>
     </div>
+        
+    </section>
 
-</section>
+</footer>
 
-<section class="impressum">
-<div class="container">
-    <div class="pobox bg-impressum text-tn text-center">
-        <p>distributed computer systems lab, building 36, 4th floor</p>
-        <p>department of computer science, RPTU Kaiserslautern-Landau</p>
-        <p><br></p>
-        <p>PO box 3049, 67663 Kaiserslautern, Germany</p>
-    </div>
 
-    <div class="imp-links text-center">
-        <a href="people/jaeric.html">Contact Us</a>
-        <a href="https://rptu.de/impressum">Impressum</a>
-        <a href="https://rptu.de/datenschutzerklaerung">Datenschutz</a>
-        <a href="https://rptu.de/datenschutz-und-social-media">Datenschutz und Social Media</a>
-    </div>
-</div>
-    
-</section>
 
     
 </body>
