@@ -1,0 +1,571 @@
+/* Globals
+------------------------------------------------------------ */
+:root {
+    --primary: #0d6efd;
+    --secondary: #5e656b;
+    --color3: #0dcaf0;
+    --color4: #198754;
+    --white: #ffffff;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img,
+picture {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+figure {
+    margin: 1em 0;
+}
+
+button,
+[role="button"] {
+    cursor: pointer;
+}
+
+/* Needed to cloak hidden elements before JS loads when using Alpine.js */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Utilities
+------------------------------------------------------------ */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #ddd;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+.layout__contained {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85rem;
+}
+
+.layout__x-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.drop-shadow {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+/* Layouts
+------------------------------------------------------------ */
+.site-footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header__layout-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    column-gap: 1rem;
+    grid-template-areas: "logo mobile-menu";
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .header__layout-grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto;
+        gap: 1rem;
+        grid-template-areas: "logo mobile-menu main-menu";
+    }
+}
+
+.header__logo-wrapper {
+    grid-area: logo;
+    width: 16rem;
+    margin: 0;
+}
+
+.header__mobile-menu {
+    grid-area: mobile-menu;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+@media (min-width: 768px) {
+    .header__mobile-menu {
+        display: none;
+    }
+}
+
+.header__main-menu {
+    grid-area: main-menu;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+@media (min-width: 768px) {
+    .header__main-menu {
+        display: flex;
+    }
+}
+
+/* Common Menu
+------------------------------------------------------------ */
+.site-header nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.site-header nav li {
+    list-style-type: none;
+}
+
+.site-header nav ul > li a {
+    text-decoration: none;
+}
+
+/* Main Menu
+------------------------------------------------------------ */
+.header__main-menu {
+    --color_main_menu_link: var(--dark);
+    --color_main_menu_link_hover: var(--primary);
+    --color_main_menu_item_bg: unset;
+    --color_main_menu_item_bg_hover: var(--light);
+    --color_main_menu_item_border_hover: var(--primary);
+    --color_main_menu_submenu_bg: var(--light);
+    --color_main_menu_submenu_item_bg: var(--light);
+    --color_main_menu_submenu_item_bg_hover: var(--light);
+    --color_main_menu_submenu_item_text: var(--secondary);
+    --color_main_menu_submenu_item_text_hover: var(--primary);
+}
+
+.main-menu__list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.125rem;
+    flex-wrap: wrap;
+}
+
+.main-menu__list > li {
+    background-color: var(--color_main_menu_item_bg);
+    color: var(--color_main_menu_link);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.main-menu__list > li:hover {
+    background-color: var(--color_main_menu_item_bg_hover);
+    color: var(--color_main_menu_link_hover);
+    border-bottom: 2px solid var(--color_main_menu_item_border_hover);
+}
+
+.main-menu__list > li a {
+    padding: 0.75rem 1.75rem;
+    color: inherit;
+    display: flex;
+}
+
+/* Main Menu Submenu
+------------------------------------------------------------ */
+.header__main-menu .has-submenu > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-menu__list .has-submenu button {
+    background-color: unset;
+    border: 0;
+    padding: 0.75rem 1.25rem 0.75rem 0.25rem;
+    color: inherit;
+    display: inline-flex;
+}
+
+.header__main-menu .has-submenu > div a {
+    padding-right: 0.25rem;
+}
+
+.header__main-menu .submenu {
+    background-color: var(--color_main_menu_submenu_bg);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999;
+    top: 105%;
+    left: 0;
+}
+
+.header__main-menu .submenu > li {
+    white-space: nowrap;
+    background-color: var(--color_main_menu_submenu_item_bg);
+    color: var(--color_main_menu_submenu_item_text);
+}
+
+.header__main-menu .submenu > li:hover {
+    background-color: var(--color_main_menu_submenu_item_bg_hover);
+    color: var(--color_main_menu_submenu_item_text_hover);
+}
+
+/* Mobile Menu
+------------------------------------------------------------ */
+.header__mobile-menu {
+    --color_mobile_menu_button_bg: var(--light);
+    --color_mobile_menu_button_lines: var(--dark);
+    --color_mobile_menu_panel_bg: var(--white);
+    --color_mobile_menu_text: var(--dark);
+    --color_mobile_menu_text_hover: var(--secondary);
+}
+
+.mobile-menu__trigger {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--color_mobile_menu_button_bg);
+    border-radius: 4px;
+    border: 1px solid var(--color_mobile_menu_button_lines);
+}
+
+.mobile-menu__trigger-lines {
+    display: block;
+    width: 1.5em;
+    border-bottom: 2px solid var(--color_mobile_menu_button_lines);
+    margin: 0.25rem 0;
+}
+
+.mobile-menu__trigger-lines--line1 {
+    transform: translate(0%, 300%) rotate(45deg);
+}
+
+.mobile-menu__trigger-lines--line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mobile-menu__trigger-lines--line3 {
+    transform: translate(0%, -300%) rotate(-45deg);
+}
+
+.mobile-menu__background {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 998;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.mobile-menu__panel {
+    background-color: var(--color_mobile_menu_panel_bg);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    padding: 0.5rem;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: var(--color_mobile_menu_button_lines);
+    border: 1px solid var(--color_mobile_menu_button_lines);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mobile-menu__logo-wrapper {
+    width: 12rem;
+    margin: 0 0 1rem;
+}
+
+.mobile-menu__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu__list li {
+    display: flex;
+    flex-direction: column;
+    color: var(--color_mobile_menu_text);
+}
+
+.mobile-menu__list li:hover {
+    color: var(--color_mobile_menu_text_hover);
+}
+
+.mobile-menu__list a {
+    display: flex;
+    color: inherit;
+    padding: 0.75rem 1rem 0.75rem 0;
+}
+
+.mobile-menu__list .has-submenu > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mobile-menu__list button {
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    flex-grow: 1;
+    color: inherit;
+}
+
+.mobile-menu__list .submenu {
+    display: block;
+    padding: 0 1rem;
+}
+
+
+/* Hero */
+.hero {
+    margin-bottom: 50px;
+}
+
+.hero .container {
+    background: url('../images/hero.png') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: 900px;
+}
+
+.hero .hero-content {
+    width: 70%;
+}
+
+/* Team */
+.team {
+    padding: 40px 0;
+}
+
+.team .team-heading {
+    width: 700px;
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.team .card p:nth-child(2) {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.img-footer {
+    padding: 40px 0;
+}
+
+.impressum {
+    background: #000;
+    color: #fff;
+    padding: 15px 0 40px;
+}
+
+.impressum .pobox {
+    padding: 20px;
+}
+
+.impressum .imp-links {
+    text-align: center;
+}
+
+.impressum .imp-links a {
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 7px;
+}
+
+
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Text Classes */
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-tn {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.drop-shadow {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+/* Background */
+
+.bg-primary {
+    background: var(--discoblau);
+    color: #fff;
+}
+
+.bg-light {
+    background: #333;
+    color: #fff;
+}
+
+.bg-dark {
+    background: #888;
+    color: #fff;
+}
+
+.bg-black {
+    background: #000;
+    color: #fff;
+}
+
+.bg-footer {
+    background: #eee;
+    color: #000;
+}
+
+.bg-impressum {
+    color: #ccc;
+}
+
+
+/* Cards */
+
+.card {
+    background: #fff;
+    color: #555;
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+}
+
+.card-footer {
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 10px;
+    display: flex;
+    vertical-align: middle;
+}
+
+.card-rptu {
+    text-align: left;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+}
+
+/* New Stuff
+------------------------------------------------------------ */
