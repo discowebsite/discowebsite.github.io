@@ -43,11 +43,11 @@
                             </button>
                             <nav aria-label="Mobile Menu" class="mobile-menu__nav">
                                 <figure class="mobile-menu__logo-wrapper" data-pg-collapsed><a href="#" cms-site-link="home"><picture>
-                                            <img src="assets/images/logoipsum-logo-6.png" cms-site-logo/>
-                                        </picture><span class="screen-reader-text">Homepage Link</span></a>
+                                            <img src="images/disco.svg" cms-site-logo/>
+                                        </picture><span class="screen-reader-text">Home</span></a>
                                 </figure>
                                 <ul class="mobile-menu__list" cms-menu="mobilemenu" cms-menu-register cms-menu-register-description="Mobile Menu" cms-menu-dropdown="> li:nth-of-type(2)">
-                                    <li> <a href="#">Item One</a>
+                                    <li> <a href="#">Home</a>
                                     </li>
                                     <li class="has-submenu" x-data="{
                                     open: false,
@@ -64,7 +64,7 @@
                                         focusAfter && focusAfter.focus()
                                     },
                                 }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['mobilemenu-submenu']"> 
-                                        <div><a href="#">Item Two</a>
+                                        <div><a href="people.html">People</a>
                                             <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mobilemenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mobilemenu-submenu')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1rem" :class="{'rotate-90': open}" viewBox="0 0 16 16" width="1rem"> 
                                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>                                                         
@@ -72,9 +72,11 @@
                                             </button>
                                         </div>
                                         <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')">
-                                            <li> <a href="#">Sub Menu One</a>
+                                            <li> <a href="people/jaeric.html">Järic</a>
                                             </li>
-                                            <li> <a href="#">Sub Menu Two</a>
+                                            <li> <a href="people/schmeric.html">Schmeric</a>
+                                            </li>
+                                            <li> <a href="people/maunzi.html">Maunzi</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -94,7 +96,7 @@
                                     },
                                 }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['mobilemenu-submenu']" cms-no-export data-pg-collapsed> 
                                         <div>
-                                            <a href="#">Item Three</a>
+                                            <a href="teaching-winter.html">Teaching</a>
                                             <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mobilemenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mobilemenu-submenu')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1rem" :class="{'rotate-90': open}" viewBox="0 0 16 16" width="1rem"> 
                                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>                                                         
@@ -102,14 +104,25 @@
                                             </button>
                                         </div>
                                         <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')">
-                                            <li> <a href="#">Sub Menu One</a>
+                                            <li> <a href="teaching/pansec.html">PanSec</a>
                                             </li>
-                                            <li> <a href="#">Sub Menu Two</a>
+                                            <li> <a href="teaching/theses.html">Theses</a>
+                                            </li>
+                                            <li> <a href="teaching/completed-theses.html">Completed Theses</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li data-pg-collapsed cms-no-export> <a href="#">Item Four</a>
+                                    <li data-pg-collapsed cms-no-export> <a href="#">Events</a>
                                     </li>
+                                    <li data-pg-collapsed cms-no-export> <a href="#">Publications</a>
+                                    </li>
+                                    <li data-pg-collapsed cms-no-export> <a href="#">Projects</a>
+                                    </li>
+                                    <li data-pg-collapsed cms-no-export> <a href="#">Downloads</a>
+                                    </li>
+                                    <li data-pg-collapsed cms-no-export> <a href="#">Visit Us</a>
+                                    </li>
+                                    
                                 </ul>
                             </nav>
                         </div>
