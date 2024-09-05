@@ -41,7 +41,7 @@ img {
     vertical-align: auto;
 }
 
-.navbar .main-menu ul {
+.navbar .main-menu ul  {
     display: flex;
 }
 
@@ -59,6 +59,7 @@ img {
 .navbar ul li a i {
     margin-right: 50px;
 }
+
 
 /* Hero */
 .hero {
@@ -95,6 +96,36 @@ img {
 .team .card p:nth-child(2) {
     margin-top: 30px;
     font-weight: bold;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.img-footer {
+    padding: 40px 0;
+}
+
+.impressum {
+    background: #000;
+    color: #fff;
+    padding: 15px 0 40px;
+}
+
+.impressum .pobox {
+    padding: 20px;
+}
+
+.impressum .imp-links {
+    text-align: center;
+}
+
+.impressum .imp-links a {
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 7px;
 }
 
 
@@ -152,6 +183,13 @@ img {
     text-align: center;
 }
 
+.text-tn {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
 /* Background */
 
 .bg-primary {
@@ -174,11 +212,39 @@ img {
     color: #fff;
 }
 
+.bg-footer {
+    background: #eee;
+    color: #000;
+}
+
+.bg-impressum {
+    color: #ccc;
+}
+
+
 /* Cards */
 
 .card {
     background: #fff;
-    color: #000;
-    border-radius: 10px;
+    color: #555;
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
     padding: 20px;
+}
+
+.card-footer {
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 10px;
+    display: flex;
+    vertical-align: middle;
+}
+
+.card-rptu {
+    text-align: left;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
 }
