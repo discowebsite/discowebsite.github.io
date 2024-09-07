@@ -19,8 +19,8 @@
         <div class="layout__contained layout__x-padding">
             <div class="header__layout-grid">
                 <figure class="header__logo-wrapper">
-                    <a href="#" cms-site-link="home"><picture>
-                            <img src="images/disco.svg" cms-site-logo/>
+                    <a href="/index.html" cms-site-link="home"><picture>
+                            <img src="/images/disco.svg" cms-site-logo/>
                         </picture><span class="screen-reader-text">Home</span></a>
                 </figure>
                 <div class="header__mobile-menu" x-data="{ mobilemenuopen: false }" x-on:keydown.escape="isOpen = false">
@@ -42,12 +42,12 @@
                                 </svg>
                             </button>
                             <nav aria-label="Mobile Menu" class="mobile-menu__nav">
-                                <figure class="mobile-menu__logo-wrapper" data-pg-collapsed><a href="#" cms-site-link="home"><picture>
-                                            <img src="images/disco.svg" cms-site-logo/>
+                                <figure class="mobile-menu__logo-wrapper" data-pg-collapsed><a href="/index.html" cms-site-link="home"><picture>
+                                            <img src="/images/disco.svg" cms-site-logo/>
                                         </picture><span class="screen-reader-text">Home</span></a>
                                 </figure>
                                 <ul class="mobile-menu__list" cms-menu="mobilemenu" cms-menu-register cms-menu-register-description="Mobile Menu" cms-menu-dropdown="> li:nth-of-type(2)">
-                                    <li> <a href="#">Home</a>
+                                    <li> <a href="/index.html">Home</a>
                                     </li>
                                     <li class="has-submenu" x-data="{
                                     open: false,
@@ -64,7 +64,7 @@
                                         focusAfter && focusAfter.focus()
                                     },
                                 }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['mobilemenu-submenu']"> 
-                                        <div><a href="people.html">People</a>
+                                        <div><a href="/people.html">People</a>
                                             <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mobilemenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mobilemenu-submenu')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1rem" :class="{'rotate-90': open}" viewBox="0 0 16 16" width="1rem"> 
                                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>                                                         
@@ -72,11 +72,11 @@
                                             </button>
                                         </div>
                                         <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')">
-                                            <li> <a href="people/jaeric.html">Järic</a>
+                                            <li> <a href="/people/jaeric.html">Järic</a>
                                             </li>
-                                            <li> <a href="people/schmeric.html">Schmeric</a>
+                                            <li> <a href="/people/schmeric.html">Schmeric</a>
                                             </li>
-                                            <li> <a href="people/maunzi.html">Maunzi</a>
+                                            <li> <a href="/people/maunzi.html">Maunzi</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -96,7 +96,7 @@
                                     },
                                 }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['mobilemenu-submenu']" cms-no-export data-pg-collapsed> 
                                         <div>
-                                            <a href="teaching-winter.html">Teaching</a>
+                                            <a href="/teaching-winter.html">Teaching</a>
                                             <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mobilemenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mobilemenu-submenu')">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1rem" :class="{'rotate-90': open}" viewBox="0 0 16 16" width="1rem"> 
                                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>                                                         
@@ -104,18 +104,66 @@
                                             </button>
                                         </div>
                                         <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')">
-                                            <li> <a href="teaching/pansec.html">PanSec</a>
+                                            <li> <a href="/teaching/pansec.html">PanSec</a>
                                             </li>
-                                            <li> <a href="teaching/theses.html">Theses</a>
+                                            <li> <a href="/teaching/theses.html">Theses</a>
                                             </li>
-                                            <li> <a href="teaching/completed-theses.html">Completed Theses</a>
+                                            <li> <a href="/teaching/completed-theses.html">Completed Theses</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li data-pg-collapsed cms-no-export> <a href="#">Events</a>
                                     </li>
-                                    <li data-pg-collapsed cms-no-export> <a href="/publications.html">Publications</a>
-                                    </li>
+                                    <li class="has-submenu" x-data="{
+                                        open: false,
+                                        toggle() {
+                                            if (this.open) {
+                                                return this.close()
+                                            }
+                                            this.$refs.button.focus()
+                                            this.open = true
+                                        },
+                                        close(focusAfter) {
+                                            if (! this.open) return
+                                            this.open = false
+                                            focusAfter && focusAfter.focus()
+                                        },
+                                        hover() {
+                                            if ('ontouchstart' in document.documentElement) {
+                                                //console.log('supports touch')
+                                                return;
+                                            } else {
+                                                //console.log('does NOT support touch')
+                                                if (this.open) {
+                                                    return this.close()
+                                                }
+                                                this.open = true
+                                            }
+                                        }
+                                    }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']"> 
+                                    <div>
+                                        <a href="/publications.html">Publications</a>
+                                        <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
+                                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')">
+                                        <li> <a href="/publications/constantin.html">Vlad-Cristian Constantion</a>
+                                        </li>
+                                        <li> <a href="/publications/espen.html">Markus Espen</a>
+                                        </li>
+                                        <li> <a href="/publications/hamscher.html">Anja Hamscher</a>
+                                        </li>
+                                        <li> <a href="/publications/jedermann.html">Eric Jedermann</a>
+                                        </li>
+                                        <li> <a href="/publications/schaefer.html">Matthias Schäfer</a>
+                                        </li>
+                                        <li> <a href="/publications/schmitt.html">Jens B. Schmitt</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                     <li data-pg-collapsed cms-no-export> <a href="#">Projects</a>
                                     </li>
                                     <li data-pg-collapsed cms-no-export> <a href="#">Downloads</a>
@@ -225,7 +273,56 @@
                             </li>
                             <li data-pg-collapsed cms-no-export> <a href="#">Events</a>
                             </li>
-                            <li data-pg-collapsed cms-no-export> <a href="/publications.html">Publications</a>
+                            <li class="has-submenu" x-data="{
+                              open: false,
+                              toggle() {
+                                  if (this.open) {
+                                      return this.close()
+                                  }
+                                  this.$refs.button.focus()
+                                  this.open = true
+                              },
+                              close(focusAfter) {
+                                  if (! this.open) return
+                                  this.open = false
+                                  focusAfter && focusAfter.focus()
+                              },
+                              hover() {
+                                  if ('ontouchstart' in document.documentElement) {
+                                      //console.log('supports touch')
+                                      return;
+                                  } else {
+                                      //console.log('does NOT support touch')
+                                      if (this.open) {
+                                          return this.close()
+                                      }
+                                      this.open = true
+                                  }
+                              }
+                          }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']"> 
+                          <div>
+                              <a href="/publications.html">Publications</a>
+                              <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
+                                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
+                                  </svg>
+                              </button>
+                          </div>
+                          <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')">
+                              <li> <a href="/publications/constantin.html">Vlad-Cristian Constantion</a>
+                              </li>
+                              <li> <a href="/publications/espen.html">Markus Espen</a>
+                              </li>
+                              <li> <a href="/publications/hamscher.html">Anja Hamscher</a>
+                              </li>
+                              <li> <a href="/publications/jedermann.html">Eric Jedermann</a>
+                              </li>
+                              <li> <a href="/publications/schaefer.html">Matthias Schäfer</a>
+                              </li>
+                              <li> <a href="/publications/schmitt.html">Jens B. Schmitt</a>
+                              </li>
+                          </ul>
+                      </li>
                             </li>
                             <li data-pg-collapsed cms-no-export> <a href="#">Projects</a>
                             </li>
@@ -240,6 +337,7 @@
             </div>
         </div>
     </header>
+
 
 
 <!-- Hero-->

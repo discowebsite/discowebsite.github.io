@@ -13,6 +13,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+
     <header class="site-header">
 
         <div class="layout__contained layout__x-padding">
@@ -113,56 +114,8 @@
                                     </li>
                                     <li data-pg-collapsed cms-no-export> <a href="#">Events</a>
                                     </li>
-                                    <li class="has-submenu" x-data="{
-                                        open: false,
-                                        toggle() {
-                                            if (this.open) {
-                                                return this.close()
-                                            }
-                                            this.$refs.button.focus()
-                                            this.open = true
-                                        },
-                                        close(focusAfter) {
-                                            if (! this.open) return
-                                            this.open = false
-                                            focusAfter && focusAfter.focus()
-                                        },
-                                        hover() {
-                                            if ('ontouchstart' in document.documentElement) {
-                                                //console.log('supports touch')
-                                                return;
-                                            } else {
-                                                //console.log('does NOT support touch')
-                                                if (this.open) {
-                                                    return this.close()
-                                                }
-                                                this.open = true
-                                            }
-                                        }
-                                    }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']"> 
-                                    <div>
-                                        <a href="/publications.html">Publications</a>
-                                        <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
-                                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')">
-                                        <li> <a href="/publications/constantin.html">Vlad-Cristian Constantion</a>
-                                        </li>
-                                        <li> <a href="/publications/espen.html">Markus Espen</a>
-                                        </li>
-                                        <li> <a href="/publications/hamscher.html">Anja Hamscher</a>
-                                        </li>
-                                        <li> <a href="/publications/jedermann.html">Eric Jedermann</a>
-                                        </li>
-                                        <li> <a href="/publications/schaefer.html">Matthias Schäfer</a>
-                                        </li>
-                                        <li> <a href="/publications/schmitt.html">Jens B. Schmitt</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                    <li data-pg-collapsed cms-no-export> <a href="/publications.html">Publications</a>
+                                    </li>
                                     <li data-pg-collapsed cms-no-export> <a href="#">Projects</a>
                                     </li>
                                     <li data-pg-collapsed cms-no-export> <a href="#">Downloads</a>
@@ -336,7 +289,6 @@
             </div>
         </div>
     </header>
-
 
 
 
