@@ -635,11 +635,20 @@ button,
     width: 65%;
 }
 
+
+.bibentry {
+    background: #eee;
+    border: #444;
+    border-style:dashed;
+    border-width: 2px;
+    padding: 10px;
+    margin-right: 40px;
+}
+
 .bibtexfile button{
     background-color: unset;
     border: 0;
-    color: inherit;
-    font-weight: 500;
+    color: #333;
     font-size: 16px;
     margin-right: -2px;
 }
