@@ -660,12 +660,6 @@ button,
 
 
 
-
-
-
-
-
-
 /* Breadcrumbs */
 
  /* Style the list */
@@ -699,3 +693,34 @@ button,
     color: #01447e;
     text-decoration: underline;
   } 
+
+
+.teaching-overview {
+    margin: 30px auto; 
+    width: 45%; 
+}
+
+.module-overview {
+    text-indent: 30px;
+}
+
+.theses-overview {
+    margin: 50px auto; 
+    width: 45%; 
+}
+
+.module-overview button {
+    margin: 30px ; 
+    padding: 10px; 
+}
+
+.fas {
+    line-height: inherit!important; 
+    margin-right: 5px; 
+    vertical-align: -1.5px;
+}
+
+.module-link {
+    font-weight: 600;
+    font-size: 17px; 
+}
