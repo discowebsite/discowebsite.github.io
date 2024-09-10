@@ -153,6 +153,9 @@ button,
     }
 }
 
+
+
+
 /* Common Menu
 ------------------------------------------------------------ */
 .site-header nav ul {
@@ -378,6 +381,9 @@ button,
 /* Hero */
 .hero {
     margin-bottom: 50px;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto; 
 }
 
 .hero .container {
@@ -393,7 +399,7 @@ button,
 
 /* Team */
 .team {
-    padding: 40px 0;
+    padding: 100px 0;
 }
 
 .team .team-heading {
@@ -430,6 +436,8 @@ button,
 
 .impressum .pobox {
     padding: 20px;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .impressum .imp-links {
@@ -559,7 +567,11 @@ button,
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    padding: 20px;
+    padding: 2px 20px 0;
+}
+
+.card p {
+    font-size: 1.2rem;
 }
 
 .card-footer {
@@ -569,6 +581,17 @@ button,
     display: flex;
     vertical-align: middle;
 }
+
+@media (max-width: 768px) {
+    .card-footer {
+        display: none;
+    }
+
+    .footer-grid {
+        display:flex;
+    }
+}
+
 
 .card-rptu {
     text-align: left;
