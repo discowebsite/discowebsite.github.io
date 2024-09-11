@@ -804,3 +804,33 @@ button,
     font-weight: 600;
     font-size: 17px; 
 }
+
+
+/* People Pages */
+
+.perspage {
+    width: 100%; 
+    max-width: 1100px; 
+    margin: auto; 
+}
+
+.persinfo {
+    width: 100%; 
+    max-width: 650px; 
+}
+
+.perstext {
+    width: 100%;
+    max-width: 1100px; 
+    margin: 20px auto; 
+}
+
+.perstext h2 {
+    color: var(--discored);
+    font-size: 25px; 
+}
+
+.perstext h3 {
+    color: var(--discopurple);
+    font-size: 20px; 
+}
