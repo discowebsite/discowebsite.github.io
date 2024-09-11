@@ -610,12 +610,14 @@ button,
 /* People */
 
 .people {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .people-tab {
     margin: 30px auto;
     table-layout: fixed;
+    width: 100%;
+    max-width: 1100px;
 }
 
 .people .people-tab tr:nth-child(even) {
@@ -626,7 +628,6 @@ button,
 
     padding: 5px 10px;
     border: 1px solid;
-    width: 250px;
 }
 
 .people .people-tab th {
@@ -637,7 +638,8 @@ button,
 .former-tab {
     margin: 30px auto;
     table-layout: fixed;
-    width: 43%;
+    width: 100%; 
+    max-width: 1100px;
 }
 
 .former-tab td {
