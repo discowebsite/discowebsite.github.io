@@ -435,6 +435,8 @@ button,
     margin: auto; 
 }
 
+
+
 .teaching-gen {
     background-color: var(--discopurple);
     padding: 20px; 
@@ -448,6 +450,18 @@ button,
     color: var(--discoblue);
     background: #ddd;
 }
+
+@media (max-width: 700px) {
+    .teaching-tiles {
+        grid-template-columns: 1fr;
+        gap: 0; 
+    }
+    .teaching-gen {
+        padding: 0;
+    }
+}
+
+
 
 .footer-grid {
     display: grid;
@@ -761,7 +775,8 @@ button,
 
 .teaching-overview {
     margin: 30px auto; 
-    width: 45%; 
+    width: 100%;
+    max-width: 1100px;  
 }
 
 .module-overview {
@@ -770,7 +785,8 @@ button,
 
 .theses-overview {
     margin: 50px auto; 
-    width: 45%; 
+    width: 100%; 
+    max-width: 1100px; 
 }
 
 .module-overview button {
