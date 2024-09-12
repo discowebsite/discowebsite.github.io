@@ -710,7 +710,8 @@ button,
 
 .pub-table {
     margin: 30px auto;
-    width: 65%;
+    width: 100%;
+    max-width: 1200px; 
 }
 
 
@@ -726,9 +727,19 @@ button,
 .bibtexfile button{
     background-color: unset;
     border: 0;
-    color: #333;
+    color: var(--discored);
     font-size: 16px;
+    font-weight: 500; 
     margin-right: -2px;
+}
+
+.bibshow {
+    background-color: #ddd;
+    padding: 15px;
+    border-style: dashed;
+    border-width: 2px; 
+    width: auto; 
+    max-width: 1100px; 
 }
 
 .pub-author-list {
@@ -859,4 +870,3 @@ button,
     color: var(--discopurple);
     font-size: 20px; 
 }
-
