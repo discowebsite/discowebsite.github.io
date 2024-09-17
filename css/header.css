@@ -444,7 +444,11 @@ button,
 
 
 .teaching-gen {
-    background-color: var(--discored);
+    background-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #555;
+    border-radius: 5px;
     padding: 10px 20px 20px; 
     width: 100%; 
     max-width: 1100px; 
@@ -459,6 +463,11 @@ button,
 .teaching-tiles .iteration {
     font-weight: 500;
     background: #ddd;
+    color: #000;
+}
+
+.teaching-tiles .card {
+    color: #000;
 }
 
 @media (max-width: 700px) {
