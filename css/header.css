@@ -680,17 +680,17 @@ button,
     max-width: 1100px;
 }
 
-.people .people-tab tr:nth-child(even) {
+.people-tab tr:nth-child(even) {
     background-color: #ddd;
 } 
 
-.people .people-tab td {
+.people-tab td {
 
     padding: 5px 10px;
     border: 1px solid;
 }
 
-.people .people-tab th {
+.people-tab th {
     font-size: 1.4rem;
     font-weight:500;
 }
