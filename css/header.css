@@ -903,3 +903,54 @@ button,
     font-size: 25px; 
     color: #000;
 }
+
+.parallax {
+    background-image: url("/images/disco.jpg");
+    max-width: 1300px;  
+    width: 100%;
+    height: 500px; 
+    margin: 0 auto; 
+    background-attachment:fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.parallax h1 {
+    text-align: center;
+    padding: 300px 0px 20px 0px;
+    font-family: "Fjalla One", serif; 
+    font-size: 50px; 
+    text-shadow:
+    -2px   -2px #fff,
+    -2px -1.5px #fff,
+    -2px   -1px #fff,
+    -2px -0.5px #fff,
+    -2px    0px #fff,
+    -2px  0.5px #fff,
+    -2px    1px #fff,
+    -2px  1.5px #fff,
+    -2px    2px #fff,
+    -1.5px  2px #fff,
+    -1px    2px #fff,
+    -0.5px  2px #fff,
+    0px     2px #fff,
+    0.5px   2px #fff,
+    1px     2px #fff,
+    1.5px   2px #fff,
+    2px     2px #fff,
+    2px   1.5px #fff,
+    2px     1px #fff,
+    2px   0.5px #fff,
+    2px     0px #fff,
+    2px  -0.5px #fff,
+    2px    -1px #fff,
+    2px  -1.5px #fff,
+    2px    -2px #fff,
+    1.5px  -2px #fff,
+    1px    -2px #fff,
+    0.5px  -2px #fff,
+    0px    -2px #fff,
+    -0.5px -2px #fff,
+    -1px   -2px #fff,
+    -1.5px -2px #fff;
+}
