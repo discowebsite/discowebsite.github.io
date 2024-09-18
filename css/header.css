@@ -478,6 +478,10 @@ button,
     .teaching-gen {
         padding: 0;
     }
+
+    .teaching-gen h1 {
+        text-align: center;
+    }
 }
 
 
@@ -825,6 +829,8 @@ button,
     margin: 30px auto; 
     width: 100%;
     max-width: 1100px;  
+    padding-left: 5px; 
+    padding-right: 5px;
 }
 
 .module-overview {
