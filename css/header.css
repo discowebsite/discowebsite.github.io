@@ -397,7 +397,7 @@ button,
 
 /* Team */
 .team {
-    padding: 100px 0;
+    padding: 100px 0 30px;
 }
 
 .team .team-heading {
@@ -680,7 +680,7 @@ button,
     max-width: 1100px;
 }
 
-.people-tab tr:nth-child(even) {
+.people-tab tr:nth-child(odd) {
     background-color: #ddd;
 } 
 
@@ -693,6 +693,13 @@ button,
 .people-tab th {
     font-size: 1.4rem;
     font-weight:500;
+}
+
+.people h3 {
+    font-weight: 500; 
+    font-size: 1.4rem; 
+    text-align: center;
+    margin: 0 0 -20px; 
 }
 
 .former-tab {
@@ -712,9 +719,19 @@ button,
     font-weight:500;
 }
 
-.former-tab tr:nth-child(even) {
+.former-tab tr:nth-child(odd) {
     background-color: #ddd;
 } 
+
+
+@media (max-width: 700px) {
+    .tel {
+        display: none; 
+    }
+    .room {
+        width:min-content;
+    }
+}
 
 
 
