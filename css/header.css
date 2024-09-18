@@ -904,53 +904,38 @@ button,
     color: #000;
 }
 
-.parallax {
+/* .parallax {
     background-image: url("/images/disco.jpg");
-    max-width: 1300px;  
+    margin: 0 auto;  
     width: 100%;
-    height: 500px; 
-    margin: 0 auto; 
-    background-attachment:fixed;
-    background-position: center; 
+    max-width: 1200px; 
+    height: 100%; 
+    max-height: 500px; 
     background-repeat: no-repeat;
+    background-position: center; 
+    /* background-attachment:fixed;
+    
+    
+    background-size: contain; */
+
+.grouppic {
+    width: 100%; 
+    max-width: 1300px; 
+    margin: auto; 
 }
 
-.parallax h1 {
+
+.grouppic h1 {
     text-align: center;
-    padding: 300px 0px 20px 0px;
-    font-family: "Fjalla One", serif; 
-    font-size: 50px; 
-    text-shadow:
-    -2px   -2px #fff,
-    -2px -1.5px #fff,
-    -2px   -1px #fff,
-    -2px -0.5px #fff,
-    -2px    0px #fff,
-    -2px  0.5px #fff,
-    -2px    1px #fff,
-    -2px  1.5px #fff,
-    -2px    2px #fff,
-    -1.5px  2px #fff,
-    -1px    2px #fff,
-    -0.5px  2px #fff,
-    0px     2px #fff,
-    0.5px   2px #fff,
-    1px     2px #fff,
-    1.5px   2px #fff,
-    2px     2px #fff,
-    2px   1.5px #fff,
-    2px     1px #fff,
-    2px   0.5px #fff,
-    2px     0px #fff,
-    2px  -0.5px #fff,
-    2px    -1px #fff,
-    2px  -1.5px #fff,
-    2px    -2px #fff,
-    1.5px  -2px #fff,
-    1px    -2px #fff,
-    0.5px  -2px #fff,
-    0px    -2px #fff,
-    -0.5px -2px #fff,
-    -1px   -2px #fff,
-    -1.5px -2px #fff;
+	color: #fff;
+	font-size: 3em;
+	text-transform: uppercase;
+	text-shadow:0 0 10px #FFF, 0 2px 3px rgba(0, 0, 0, 0.42);
+    margin: -60px; 
+}
+
+@media (max-width: 700px) {
+    .grouppic {
+        display: none;
+    }
 }
